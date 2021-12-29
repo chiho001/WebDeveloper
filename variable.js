@@ -21,6 +21,14 @@ const bigInt = 12312412125125125125125125125125n;
 console.log(`value : ${bigInt}, type : ${typeof bigInt}`);
 Number.MAX_SAFE_INTEGER;
 
+// Note!
+// Immutable data types : primitive types, frozen objects(i.e. object.freeze())
+// Mutable data types : all objects by default are mutable in JS
+// favor immutable data type always for a few reasons:
+// -security
+// -thread safety
+// -reduce human mistakes
+
 // 4. Variable types
 // primitive, single item : number, string, boolean, null, undefined, symbol
 // object, box container
