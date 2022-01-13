@@ -14,22 +14,25 @@ const rabbit = {
     color: 'white',
     size: null,
     birthDate: new Date(),
-    symbol: Symbol('id'),
-    jump: () => {
-        console.log(`${this.name} can jump!`);
-    },
+    //symbol: Symbol('id'),
+    jump: function() { 
+        console.log(`${this.name} can jump!`); 
+    } 
 };
 json = JSON.stringify(rabbit);
 console.log(json);
+rabbit.jump();
 
 json = JSON.stringify(rabbit,["name","color","size"]);
 console.log(json);
 
-json = JSON.stringify(rabbit,(key, value) => {
-    console.log(`key: ${key}, value: ${value}`);
+// callback 함수형
+json = JSON.stringify(rabbit, (key, value) => {
+    console.log(`key: ${key}, value : ${value}`);
     return key === 'name' ? 'ellie' : value;
 });
 console.log(json);
+
 
 // 2. JSON to Object
 // parse(json)
